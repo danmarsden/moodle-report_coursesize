@@ -16,15 +16,12 @@ Feature: Course size report calculates correct information
     And the following config values are set as admin:
       | config     | value | plugin            |
       | calcmethod | live  | report_coursesize |
-    And I log in as "teacher1"
-    And I am on "Course 1" course homepage
-    And I turn editing mode on
-    And I add a "File" to section "1"
-    And I set the following fields to these values:
-      | Name                      | Myfile     |
-    And I upload "report/coursesize/tests/fixtures/COPYING.txt" file to "Select files" filemanager
-    And I press "Save and return to course"
-    And I log out
+    And the following "activity" exists:
+        | activity | resource                                     |
+        | course   | C1                                           |
+        | name     | Myfile                                       |
+        | file     | report/coursesize/tests/fixtures/COPYING.txt |
+        | uploaded | 1                                            |
 
   @javascript
   Scenario: Check coursesize report for course 1
