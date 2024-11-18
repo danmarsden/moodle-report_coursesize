@@ -17,11 +17,11 @@ Feature: Course size report calculates correct information
       | config     | value | plugin            |
       | calcmethod | live  | report_coursesize |
     And the following "activity" exists:
-        | activity | resource                                     |
-        | course   | C1                                           |
-        | name     | Myfile                                       |
-        | file     | report/coursesize/tests/fixtures/COPYING.txt |
-        | uploaded | 1                                            |
+        | activity        | resource                                     |
+        | course          | C1                                           |
+        | name            | Myfile                                       |
+        | defaultfilename | report/coursesize/tests/fixtures/COPYING.txt |
+        | uploaded        | 1                                            |
 
   @javascript
   Scenario: Check coursesize report for course 1

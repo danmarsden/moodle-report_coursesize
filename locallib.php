@@ -88,7 +88,8 @@ function report_coursesize_get_usersizes() {
     if ($data && (time() < $data->expiry)) { // Valid cache data.
         $usersizes = $data->usersizes;
     } else {
-        $usersizes = $DB->get_records_sql(report_coursesize_usersize_sql(), [], 0, get_config('report_coursesize', 'numberofusers'));
+        $numberofusers = get_config('report_coursesize', 'numberofusers');
+        $usersizes = $DB->get_records_sql(report_coursesize_usersize_sql(), [], 0, $numberofusers);
 
         if (!empty($usersizes)) {
             $data = new \stdClass();
