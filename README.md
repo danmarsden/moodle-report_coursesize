@@ -5,11 +5,10 @@ This plugin provides approximate disk usage by Moodle courses.
 
 ## Branches
 
-| Moodle version    | Branch             | PHP  |
-| ----------------- | ------------------ | ---- |
-| Moodle 3.9+       | `MOODLE_39_STABLE` | 7.2+ |
-| Totara 12+        | `totara-master`    | 7.2+ |
-| Moodle 3.5 to 3.8 | `MOODLE_35_STABLE` | 7.2+ |
+| Moodle version    | Branch             |
+| ----------------- | ------------------ |
+| Totara 12+        | `totara-master`    |
+| Moodle 4.1 to 4.5 | `MOODLE_401_STABLE` |
 
 There are 2 known shortcomings with this plugin
 * If the same file is used multiple times within a course, the report will report an inflated disk usage figure as the files
