@@ -54,9 +54,7 @@ function xmldb_report_coursesize_upgrade($oldversion) {
         } else {
             // Throw warning - some old unsupported branches use a similar table that is not compatible with this version,
             // these must be cleaned up manually.
-            $error = "Cannot upgrade this old coursereport plugin - ";
-            $error += "you should check/delete the old table before upgrading to this release.";
-            throw new \moodle_exception($error);
+            throw new \moodle_exception('error_unsupported_branch', 'report_coursesize');
         }
 
         // Coursesize savepoint reached.
