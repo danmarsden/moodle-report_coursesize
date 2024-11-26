@@ -32,6 +32,7 @@ $string['coursebackupbytes'] = '{$a->backupbytes} bytes used for backup by cours
 $string['coursereport'] = 'Summary of plugin types - NOTE this may be different than the main course listing and is probably more accurate.';
 $string['coursesize:view'] = 'View course size report';
 $string['diskusage'] = 'Total';
+$string['error_unsupported_branch'] = 'Cannot upgrade this old coursereport plugin - you should check/delete the old table before upgrading to this release.';
 $string['nouserfiles'] = 'No user files listed.';
 $string['pluginname'] = 'Course size';
 $string['sizepermitted'] = '(Permitted usage {$a}MB)';

@@ -19,7 +19,7 @@ Feature: Course size report calculates correct information
     And I log in as "teacher1"
     And I am on "Course 1" course homepage
     And I turn editing mode on
-    And I add a "File" to section "1"
+    And I add a "File" to section "1" using the activity chooser
     And I set the following fields to these values:
       | Name                      | Myfile     |
     And I upload "report/coursesize/tests/fixtures/COPYING.txt" file to "Select files" filemanager
