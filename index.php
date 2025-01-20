@@ -167,12 +167,10 @@ if ($viewtab == 'userstopnum') {
 
     $coursesizes = $DB->get_records('report_coursesize');
     foreach ($courses as $courseid => $course) {
-        if ($live) {
-            if (isset($backupsizes[$course->id])) {
-                $course->backupsize = $backupsizes[$course->id]->filesize;
-            } else {
-                $course->backupsize = 0;
-            }
+        if (isset($backupsizes[$course->id])) {
+            $course->backupsize = $backupsizes[$course->id]->filesize;
+        } else {
+            $course->backupsize = 0;
         }
         $totalsize = $totalsize + $course->filesize;
         $totalbackupsize = $totalbackupsize + $course->backupsize;
